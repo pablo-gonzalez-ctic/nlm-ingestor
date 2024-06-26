@@ -20,7 +20,7 @@ RUN apt-get install -y \
     && apt-get update \
     && apt-get install -y \
     tesseract-ocr libtesseract-dev \
-    && wget -P /usr/share/tesseract-ocr/5/tessdata/ https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata
+    && wget -P /usr/share/tesseract-ocr/5/tessdata/ https://github.com/tesseract-ocr/tessdata_best/raw/main/spa.traineddata
 RUN apt-get install unzip -y && \
     apt-get install git -y && \
     apt-get autoremove -y
@@ -33,4 +33,5 @@ RUN pip install -r requirements.txt
 RUN python -m nltk.downloader stopwords
 RUN python -m nltk.downloader punkt
 RUN chmod +x run.sh
+EXPOSE 5002
 CMD ./run.sh

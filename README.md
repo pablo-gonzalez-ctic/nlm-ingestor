@@ -49,9 +49,9 @@ Pull the docker image
 ```
 docker pull ghcr.io/nlmatics/nlm-ingestor:latest
 ```
-Run the docker image mapping the port 5001 to port of your choice. 
+Run the docker image mapping the port 5002 to port of your choice. 
 ```
-docker run -p 5010:5001 ghcr.io/nlmatics/nlm-ingestor:latest-<version>
+docker run -p 5010:5002 ghcr.io/nlmatics/nlm-ingestor:latest-<version>
 ```
 Once you have the server running, you can use the [llmsherpa](https://github.com/nlmatics/llmsherpa) API library to get chunks and use them for your LLM projects. Your llmsherpa_url will be:
 "http://localhost:5010/api/parseDocument?renderFormat=all"
